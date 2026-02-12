@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chan Pak Hung - Data Science & Photography</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Internal CSS (meets requirement) -->
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Raleway", sans-serif;
+      }
+
+      .skill-bar {
+        height: 8px;
+        background: #f1f1f1;
+        margin-bottom: 10px;
+      }
+
+      .skill-fill {
+        height: 100%;
+        background: #0a192f;
+        transition: width 0.6s ease;
+      }
+
+      img.profile {
+        transition: transform 0.3s;
+      }
+
+      img.profile:hover {
+        transform: scale(1.05);
+      }
+
+      /* Hero name styles */
+      .hero-name-main {
+        font-size: 4.5rem; /* large on desktop */
+        font-weight: bold;
+        line-height: 0.95;
+        margin: 0;
+        white-space: nowrap; /* ← prevents breaking into vertical lines */
+        overflow: hidden;
+        text-overflow: ellipsis; /* adds ... if extremely narrow (rare) */
+      }
+
+      .hero-name-nickname {
+        font-size: 2.2rem;
+        margin: 8px 0 0 0;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      /* Responsive: smaller text on narrow screens */
+      @media (max-width: 900px) {
+        .hero-name-main {
+          font-size: 3.2rem;
+        }
+        .hero-name-nickname {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero-name-main {
+          font-size: 2.6rem; /* even smaller on phones */
+        }
+        .hero-name-nickname {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 400px) {
+        .hero-name-main {
+          font-size: 2.2rem;
+        }
+        .hero-name-nickname {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="w3-light-grey w3-content" style="max-width: 1600px">
+    <!-- Sidebar/menu (keep as is – good!) -->
+    <nav
+      class="w3-sidebar w3-collapse w3-white w3-animate-left"
+      style="z-index: 3; width: 300px"
+      id="mySidebar"
+    >
+      <br />
+      <div class="w3-container">
+        <a
+          href="#"
+          onclick="w3_close()"
+          class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+          title="close menu"
+        >
+          <i class="fa fa-remove"></i>
+        </a>
+        <!-- Your photo/avatar here -->
+        <img
+          src="images/parco.jpg"
+          style="width: 75%"
+          class="w3-round profile"
+        /><br /><br />
+        <h4><b>CHAN PAK HUNG</b></h4>
+      </div>
+      <hr />
+
+      <div class="w3-bar-block">
+        <a
+          href="index.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-black"
+          >HOME</a
+        >
+        <!-- Active state -->
+        <a
+          href="portfolio.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-black"
+          >PORTFOLIO</a
+        >
+        <a
+          href="experience.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-black"
+          >EXPERIENCE</a
+        >
+
+        <!-- Dropdown Menu -->
+        <div class="w3-dropdown-hover">
+          <button class="w3-button w3-bar-item">
+            MORE <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="portfolio.html#photography" class="w3-bar-item w3-button"
+              >Photography</a
+            >
+            <a
+              href="https://www.instagram.com/_maru.jpg_/"
+              target="_blank"
+              class="w3-bar-item w3-button"
+              >Instagram</a
+            >
+          </div>
+        </div>
+
+        <a
+          href="contact.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-black"
+          >CONTACT</a
+        >
+      </div>
+    </nav>
+
+    <!-- Overlay effect -->
+    <div
+      class="w3-overlay w3-hide-large w3-animate-opacity"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px">
+      <!-- Updated Header (personalized) -->
+      <!-- Hero header with your big photo -->
+      <header
+        class="w3-display-container w3-center"
+        style="
+          height: 600px;
+          overflow: hidden;
+          margin-bottom: 48px;
+          position: relative;
+        "
+      >
+        <!-- Your new big photo -->
+        <img
+          src="images/hero-photographer.jpg"
+          alt="Photographer in forest"
+          style="
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          "
+          class="w3-image"
+        />
+
+        <!-- Dark overlay so text is readable -->
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+          "
+        ></div>
+
+        <!-- Text on top of the photo -->
+        <div
+          class="w3-display-middle w3-text-white"
+          style="padding: 32px; max-width: 900px"
+        >
+          <h1 class="hero-name-main"><b>CHAN PAK HUNG</b></h1>
+          <h2 class="hero-name-nickname">Parco</h2>
+
+          <h3
+            style="
+              font-size: 1.8rem;
+              margin: 24px 0 32px 0;
+              text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            "
+          >
+            Data Science Undergraduate | Photographer
+          </h3>
+
+          <p
+            style="
+              font-size: 1.3rem;
+              margin: 0 0 32px 0;
+              text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+            "
+          >
+            Hong Kong • +852 9253 2042 • parcochan246@gmail.com
+          </p>
+
+          <a
+            href="ChanPakHung_CV.pdf"
+            download
+            class="w3-button w3-black w3-large w3-round-large w3-padding-large"
+          >
+            <i class="fa fa-download w3-margin-right"></i> Download CV (PDF)
+          </a>
+        </div>
+
+        <!-- Mobile hamburger button (top right corner) -->
+        <span
+          class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey w3-display-topright"
+          onclick="w3_open()"
+          style="
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            color: white;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+          "
+        >
+          <i class="fa fa-bars"></i>
+        </span>
+      </header>
+
+      <!-- About Me -->
+      <div class="w3-container w3-padding-large" style="margin-bottom: 32px">
+        <h3><b>About Me</b></h3>
+        <hr class="w3-opacity" />
+        <p>
+          A responsible and orderly Data Science student, I approach challenges
+          with structure and precision. Beyond analytics, I cultivate creativity
+          and observational acuity through photography. This blend of technical
+          discipline and artistic perspective allows me to visualize data
+          stories with both clarity and impact.
+        </p>
+
+        <h4>Interests</h4>
+        <p>
+          Photography – View my portfolio on
+          <a href="https://www.instagram.com/_maru.jpg_/" target="_blank"
+            >@_maru.jpg_</a
+          >
+        </p>
+
+        <p>
+          <a href="ChanPakHung_CV.pdf" download class="w3-button w3-black"
+            ><i class="fa fa-download"></i> Download CV (PDF)</a
+          >
+        </p>
+      </div>
+
+      <!-- Skills -->
+      <div class="w3-container w3-padding-large w3-light-grey">
+        <h3><b>Skills</b></h3>
+        <hr class="w3-opacity" />
+        <p>Python, SQL, C++, HTML, CSS</p>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 70%"></div>
+        </div>
+
+        <p>Adobe Lightroom (Photography)</p>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 85%"></div>
+        </div>
+
+        <p>Microsoft Office (Word, Excel, PowerPoint)</p>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 90%"></div>
+        </div>
+
+        <p>Basic Hardware Troubleshooting</p>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 60%"></div>
+        </div>
+      </div>
+
+      <!-- Footer (simplified) -->
+      <footer class="w3-container w3-padding-32 w3-dark-grey w3-center">
+        <p>© 2026 Chan Pak Hung</p>
+        <p>
+          Powered by
+          <a
+            href="https://www.w3schools.com/w3css/"
+            target="_blank"
+            class="w3-hover-opacity"
+            >w3.css</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

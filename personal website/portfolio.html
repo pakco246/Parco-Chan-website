@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Portfolio - Chan Pak Hung</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Internal CSS -->
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Raleway", sans-serif;
+      }
+      .photo-card {
+        transition: transform 0.3s ease;
+      }
+      .photo-card:hover {
+        transform: scale(1.04);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .gallery-img {
+        width: 100%;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+
+  <body class="w3-light-grey w3-content" style="max-width: 1600px">
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar w3-collapse w3-white w3-animate-left"
+      style="z-index: 3; width: 300px"
+      id="mySidebar"
+    >
+      <br />
+      <div class="w3-container">
+        <a
+          href="#"
+          onclick="w3_close()"
+          class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+          title="close menu"
+        >
+          <i class="fa fa-remove"></i>
+        </a>
+        <img
+          src="images/parco.jpg"
+          style="width: 75%"
+          class="w3-round"
+        /><br /><br />
+        <h4><b>CHAN PAK HUNG</b></h4>
+      </div>
+      <hr />
+
+      <div class="w3-bar-block">
+        <a
+          href="index.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-black"
+          >HOME</a
+        >
+        <a
+          href="portfolio.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-black"
+          >PORTFOLIO</a
+        >
+        <!-- active page -->
+        <a
+          href="experience.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-black"
+          >EXPERIENCE</a
+        >
+
+        <!-- Dropdown Menu -->
+        <div class="w3-dropdown-hover">
+          <button class="w3-button w3-bar-item">
+            MORE <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="#photography" class="w3-bar-item w3-button">Photography</a>
+            <a
+              href="https://www.instagram.com/maru.jpg"
+              target="_blank"
+              class="w3-bar-item w3-button"
+              >Instagram</a
+            >
+          </div>
+        </div>
+
+        <a
+          href="contact.html"
+          onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-black"
+          >CONTACT</a
+        >
+      </div>
+    </nav>
+
+    <!-- Overlay effect -->
+    <div
+      class="w3-overlay w3-hide-large w3-animate-opacity"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px">
+      <!-- Header -->
+      <header class="w3-container w3-padding-32 w3-center">
+        <span
+          class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey"
+          onclick="w3_open()"
+        >
+          <i class="fa fa-bars"></i>
+        </span>
+        <h1><b>Portfolio</b></h1>
+        <h3>Photography & Visual Storytelling</h3>
+      </header>
+
+      <!-- Photography Section -->
+      <div class="w3-container w3-padding-large" id="photography">
+        <h3><b>Photography</b></h3>
+        <p>
+          Photography is my primary creative outlet. I enjoy capturing moments,
+          landscapes, portraits and everyday life with attention to light,
+          composition and emotion.<br /><br />
+          You can view my full and latest work on Instagram:
+          <a
+            href="https://www.instagram.com/_maru.jpg_/"
+            target="_blank"
+            class="w3-text-blue"
+            >@_maru.jpg_</a
+          >
+        </p>
+
+        <!-- Example photos (replace with your own images) -->
+        <div class="w3-row-padding w3-margin-top">
+          <!-- Photo 1 -->
+          <div class="w3-col l4 m6 w3-margin-bottom">
+            <div class="w3-card photo-card">
+              <img
+                src="images/photo-1.jpg"
+                alt="Photography example 1"
+                class="gallery-img"
+              />
+              <div class="w3-container w3-white">
+                <p><b>Light and shadow</b></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 2 -->
+          <div class="w3-col l4 m6 w3-margin-bottom">
+            <div class="w3-card photo-card">
+              <img
+                src="images/photo-2.jpg"
+                alt="Photography example 2"
+                class="gallery-img"
+              />
+              <div class="w3-container w3-white">
+                <p><b>Blocked History</b></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 3 -->
+          <div class="w3-col l4 m6 w3-margin-bottom">
+            <div class="w3-card photo-card">
+              <img
+                src="images/photo-3.jpg"
+                alt="Photography example 3"
+                class="gallery-img"
+              />
+              <div class="w3-container w3-white">
+                <p><b>The Old Man and the Sea</b></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- You can add more photos here -->
+        </div>
+
+        <div class="w3-center w3-padding-32">
+          <a
+            href="https://www.instagram.com/_maru.jpg_/"
+            target="_blank"
+            class="w3-button w3-black w3-large"
+          >
+            <i class="fa fa-instagram w3-margin-right"></i>View More on
+            Instagram
+          </a>
+        </div>
+      </div>
+
+      <!-- Placeholder for future Data Science projects -->
+      <div class="w3-container w3-padding-large w3-light-grey">
+        <h3><b>Data Science Projects</b></h3>
+        <p style="font-style: italic">
+          I am currently building my portfolio of data science projects through
+          my studies at Lingnan University.<br />
+          More projects (data analysis, visualization, machine learning, etc.)
+          will be added here in the future.
+        </p>
+      </div>
+
+      <!-- Simple Footer -->
+      <footer class="w3-container w3-padding-32 w3-dark-grey w3-center">
+        <p>© 2026 Chan Pak Hung</p>
+        <p>
+          Powered by
+          <a
+            href="https://www.w3schools.com/w3css/"
+            target="_blank"
+            class="w3-hover-opacity"
+            >w3.css</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
